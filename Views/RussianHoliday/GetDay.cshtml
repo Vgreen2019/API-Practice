@@ -1,0 +1,21 @@
+﻿@model APIDemo.Models.GetDayViewModel
+
+@{
+    ViewData["Title"] = "GetDay";
+}
+
+<h1>GetDay</h1>
+
+<form asp-controller="RussianHoliday" asp-action="DayResult">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <div class="form-group">
+        <label asp-for="Date" class="control-label"></label>
+        <input asp-for="Date" asp-route-id="Model.Date" class="form-control" />
+        <span asp-validation-for="Date" class="text-danger"></span>
+    </div>
+    
+    <div class="form-group">
+        <input type="submit" value="Submit" class="btn btn-default" />
+    </div>
+</form>
+
